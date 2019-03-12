@@ -32,58 +32,130 @@ Welcome to my introduction to [Java 8](https://jdk8.java.net/). This tutorial gu
 
 * [Default Methods for Interfaces](#default-methods-for-interfaces)
 
-*[接口默认方法](#default-methods-for-interfaces)
+* [接口默认方法](#default-methods-for-interfaces)
 
 * [Lambda expressions](#lambda-expressions)
 
-*[Lambda 表达式](#lambda-expressions)
+* [Lambda 表达式](#lambda-expressions)
 
 * [Functional Interfaces](#functional-interfaces)
 
-*[功能性接口](#functional-interfaces)
+* [功能性接口](#functional-interfaces)
 
 * [Method and Constructor References](#method-and-constructor-references)
 
-*[方法和结构体引用](#method-and-constuctor-references)
+* [方法和结构体引用](#method-and-constuctor-references)
 
 * [Lambda Scopes](#lambda-scopes)
 
-*[Lambda 范围](#lambda-scopes)
+* [Lambda 范围](#lambda-scopes)
 
-  * [Accessing local variables](#accessing-local-variables)
+* [Accessing local variables](#accessing-local-variables)
 
-*[访问局部变量](#accessing-local-variables)
+* [访问局部变量](#accessing-local-variables)
 
-  * [Accessing fields and static variables](#accessing-fields-and-static-variables)
+* [Accessing fields and static variables](#accessing-fields-and-static-variables)
 
-*[访问字段和静态变量](#accessing-fields-and-static-variables)
+* [访问字段和静态变量](#accessing-fields-and-static-variables)
 
-  * [Accessing Default Interface Methods](#accessing-default-interface-methods)
+*  [Accessing Default Interface Methods](#accessing-default-interface-methods)
+
+* [访问默认接口方法](#accessing-default-interface-methods)
+
 * [Built-in Functional Interfaces](#built-in-functional-interfaces)
-  * [Predicates](#predicates)
-  * [Functions](#functions)
-  * [Suppliers](#suppliers)
-  * [Consumers](#consumers)
-  * [Comparators](#comparators)
+
+* [内置功能接口](#built-in-functional-interfaces)
+
+* [Predicates](#predicates)
+
+* [判断](#predicates) 这个该怎么译
+
+* [Functions](#functions)
+
+* [函数](#functions)
+
+* [Suppliers](#suppliers)
+
+* [生产者](#suppliers) (接口提供者？)
+
+* [Consumers](#consumers)
+
+* [消费者](#consumers)
+
+* [Comparators](#comparators)
+
+* [比较器](#comparators)
+
 * [Optionals](#optionals)
+
+* [选择器](#optionals)
+
 * [Streams](#streams)
-  * [Filter](#filter)
-  * [Sorted](#sorted)
-  * [Map](#map)
-  * [Match](#match)
-  * [Count](#count)
-  * [Reduce](#reduce)
+
+* [流](#streams)
+
+* [Filter](#filter)
+
+* [过滤器](#filter)
+
+* [Sorted](#sorted)
+
+* [排序](#sorted)
+
+* [Map](#map)
+
+* [Match](#match)
+
+* [匹配](#match)
+
+* [Count](#count)
+
+* [计数](#count)
+
+* [Reduce](#reduce)
+
+* [集合求差集](#reduce) (不知道咋译）
+
 * [Parallel Streams](#parallel-streams)
-  * [Sequential Sort](#sequential-sort)
-  * [Parallel Sort](#parallel-sort)
+
+* [并行流](#parallel-streams)
+
+* [Sequential Sort](#sequential-sort)
+
+* [顺序排序](#sequential-sort)
+
+* [Parallel Sort](#parallel-sort)
+
+* [并行排序](#parallel-sort)
+
 * [Maps](#maps)
+
 * [Date API](#date-api)
-  * [Clock](#clock)
-  * [Timezones](#timezones)
-  * [LocalTime](#localtime)
-  * [LocalDate](#localdate)
-  * [LocalDateTime](#localdatetime)
+
+* [日期 api](#date-api)
+
+* [Clock](#clock)
+
+* [计时器](#clock)
+
+* [Timezones](#timezones)
+
+* [时区](#timezones)
+
+* [LocalTime](#localtime)
+
+* [地方时间](#localtime)
+
+* [LocalDate](#localdate)
+
+* [地方日期](#localdate)
+
+* [LocalDateTime](#localdatetime)
+
 * [Annotations](#annotations)
+
+* [注解](#annotations)
+
 * [Where to go from here?](#where-to-go-from-here)
 
 ## Default Methods for Interfaces
