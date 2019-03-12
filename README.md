@@ -1,27 +1,63 @@
 # Modern Java - A Guide to Java 8
+
+# 时髦的Java -java 8 参考手册
+
 _This article was originally posted on [my blog](http://winterbe.com/posts/2014/03/16/java-8-tutorial/)._
+
+_这篇文章最初发表在[我的博客](http://winterbe.com/posts/2014/03/16/java-8-tutorial/)._
 
 > **You should also read my [Java 11 Tutorial](https://winterbe.com/posts/2018/09/24/java-11-tutorial/) (including new language and API features from Java 9, 10 and 11).**
 
-Welcome to my introduction to [Java 8](https://jdk8.java.net/). This tutorial guides you step by step through all new language features. Backed by short and simple code samples you'll learn how to use default interface methods, lambda expressions, method references and repeatable annotations. At the end of the article you'll be familiar with the most recent [API](http://download.java.net/jdk8/docs/api/) changes like streams, functional interfaces, map extensions and the new Date API. **No walls of text, just a bunch of commented code snippets. Enjoy!**
+> **你也可以翻阅我的[java11 教程]((https://winterbe.com/posts/2018/09/24/java-11-tutorial/) (包含java9，10，11的新语言和api特性）
+
+Welcome to my introduction to [Java 8](https://jdk8.java.net/). This tutorial guides you step by step through all new language features. Backed by short and simple code samples you'll learn how to use default interface methods, lambda expressions, method references and repeatable annotations. At the end of the article you'll be familiar with the most recent [API](http://download.java.net/jdk8/docs/api/) changes like streams, functional interfaces, map extensions and the new Date API.
+
+欢迎参读我的入门关于[java 8](https://jdk8.java.net/).该教程将逐步指导你了解所有的新语言特性。通过一些简短的编码示例我闷酒可以学习怎么使用默认接口方法，lambda表达式，方法引用和可重复注解。在文章的最后你将会熟悉最新的[api](http://download.java.net/jdk8/docs/api/)变化像流，功能接口，map拓展和最新的日期api.
+
+ **No walls of text, just a bunch of commented code snippets. Enjoy!**
+
+** 该文本没有墙，只是一连串的评论和代码片段。请享受Java8新特性之旅吧！**
 
 ---
 
 <p align="center">
- ★★★ Like this project? Leave a star, <a href="https://twitter.com/winterbe_">follow on Twitter</a> or <a href="https://www.paypal.me/winterbe">donate</a> to support my work. Thanks! ★★★
+ ★★★ Like this project? Leave a star, <a href="https://github.com/xiaomingtongxie/java8-tutorial"> to support my work. Thanks! ★★★
 </p>
 
 ---
 
 ## Table of Contents
 
+## 内容列表
+
 * [Default Methods for Interfaces](#default-methods-for-interfaces)
+
+*[接口默认方法](#default-methods-for-interfaces)
+
 * [Lambda expressions](#lambda-expressions)
+
+*[Lambda 表达式](#lambda-expressions)
+
 * [Functional Interfaces](#functional-interfaces)
+
+*[功能性接口](#functional-interfaces)
+
 * [Method and Constructor References](#method-and-constructor-references)
+
+*[方法和结构体引用](#method-and-constuctor-references)
+
 * [Lambda Scopes](#lambda-scopes)
+
+*[Lambda 范围](#lambda-scopes)
+
   * [Accessing local variables](#accessing-local-variables)
+
+*[访问局部变量](#accessing-local-variables)
+
   * [Accessing fields and static variables](#accessing-fields-and-static-variables)
+
+*[访问字段和静态变量](#accessing-fields-and-static-variables)
+
   * [Accessing Default Interface Methods](#accessing-default-interface-methods)
 * [Built-in Functional Interfaces](#built-in-functional-interfaces)
   * [Predicates](#predicates)
