@@ -203,7 +203,11 @@ The formula is implemented as an anonymous object. The code is quite verbose: 6 
 
 ## Lambda expressions
 
+## lamda 表达式
+
 Let's start with a simple example of how to sort a list of strings in prior versions of Java:
+
+我们以一个简单的例子开始，以前的java版本怎么对一个字符串集合进行排序：
 
 ```java
 List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
@@ -219,6 +223,8 @@ Collections.sort(names, new Comparator<String>() {
 The static utility method `Collections.sort` accepts a list and a comparator in order to sort the elements of the given list. You often find yourself creating anonymous comparators and pass them to the sort method.
 
 Instead of creating anonymous objects all day long, Java 8 comes with a much shorter syntax, **lambda expressions**:
+
+静态方法实例'Colletions.sort'为了给指定的集合元素进行排序接受了一个集合和比较器两个参数。你通常会发现自己建了匿名比较器将它们传递给排序方法。java8提供了更简短的语句，而不是整天的创建匿名对象。
 
 ```java
 Collections.sort(names, (String a, String b) -> {
