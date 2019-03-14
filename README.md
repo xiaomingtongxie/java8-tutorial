@@ -236,7 +236,7 @@ Collections.sort(names, (String a, String b) -> {
 
 As you can see the code is much shorter and easier to read. But it gets even shorter:
 
-你可以看到代码变得更短，更容易阅读，但它可以更短。
+你可以看到代码变得更短，更容易阅读，但它可以更短：
 
 ```java
 Collections.sort(names, (String a, String b) -> b.compareTo(a));
@@ -244,12 +244,15 @@ Collections.sort(names, (String a, String b) -> b.compareTo(a));
 
 For one line method bodies you can skip both the braces `{}` and the `return` keyword. But it gets even shorter:
 
+对于行方法主体可以跳过花括号和return关键词。但它还可以更短：
+
 ```java
 names.sort((a, b) -> b.compareTo(a));
 ```
 
 List now has a `sort` method. Also the java compiler is aware of the parameter types so you can skip them as well. Let's dive deeper into how lambda expressions can be used in the wild.
 
+集合list 现在有一个sort方法。java编译器也知道参数类型，你也可以忽略它们。让我们深入研究一下lambda表达式怎么在其他地方应用。
 
 ## Functional Interfaces
 
