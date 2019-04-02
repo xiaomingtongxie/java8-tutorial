@@ -256,9 +256,15 @@ List now has a `sort` method. Also the java compiler is aware of the parameter t
 
 ## Functional Interfaces
 
+## 函数式接口
+
 How does lambda expressions fit into Java's type system? Each lambda corresponds to a given type, specified by an interface. A so called _functional interface_ must contain **exactly one abstract method** declaration. Each lambda expression of that type will be matched to this abstract method. Since default methods are not abstract you're free to add default methods to your functional interface.
 
+lambda表达式如何适应java类型系统？每个lambda对应于由制定接口给定的指定类型。一个所谓的functional interface 必须恰好包含一个抽象方法声明。每个这种类型的lambda表达式都将匹配到这个抽象方法。由于默认方法不是抽象的你可以自由的在函数式接口中添加默认方法。
+
 We can use arbitrary interfaces as lambda expressions as long as the interface only contains one abstract method. To ensure that your interface meet the requirements, you should add the `@FunctionalInterface` annotation. The compiler is aware of this annotation and throws a compiler error as soon as you try to add a second abstract method declaration to the interface.
+
+只要接口仅仅包含一个抽象方法我们就可以用任意的接口作为lambda表达式。为了确保你的接口符合条件，你应该添加“@FunctionalInterface"注解。编译器知道这个声明，并在你试图向接口中添加第二个抽象方法声明的时候抛出一个编译错误。
 
 Example:
 
