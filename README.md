@@ -1,3 +1,8 @@
+
+
+**声明：一方面提升下英文水平，一方面重温下java各版本新特性，版权归原作者所有 ，除了翻译也会加自己的东西。水平有限，请理性查阅**
+
+
 # Modern Java - A Guide to Java 8
 
 # 时髦的Java -java 8 参考手册
@@ -283,10 +288,19 @@ System.out.println(converted);    // 123
 
 Keep in mind that the code is also valid if the `@FunctionalInterface` annotation would be omitted.
 
+请记住，如果省略‘@FunctionalInterface'注解，代码仍然是有效的。
+
 
 ## Method and Constructor References
 
+## 方法和构造函数引用
+
 The above example code can be further simplified by utilizing static method references:
+
+利用静态方法引用可以进一步简化上述示例代码。
+
+
+
 
 ```java
 Converter<String, Integer> converter = Integer::valueOf;
@@ -295,6 +309,8 @@ System.out.println(converted);   // 123
 ```
 
 Java 8 enables you to pass references of methods or constructors via the `::` keyword. The above example shows how to reference a static method. But we can also reference object methods:
+
+javad 8  允许你使用 '::' 关键字来传递方法或者构造器的引用。上面的示例展示了如何引用一个静态方法。但是我们也可以引用对象方法：
 
 ```java
 class Something {
@@ -313,6 +329,10 @@ System.out.println(converted);    // "J"
 
 Let's see how the `::` keyword works for constructors. First we define an example class with different constructors:
 
+让我们看一下关键字“::”是如何为构造器工作的，首先，我们用不同的构造器来定义一个示例类。
+
+
+
 ```java
 class Person {
     String firstName;
@@ -329,6 +349,9 @@ class Person {
 
 Next we specify a person factory interface to be used for creating new persons:
 
+接下来我们指定一个‘person'工厂接口来创建person对象
+
+
 ```java
 interface PersonFactory<P extends Person> {
     P create(String firstName, String lastName);
@@ -336,6 +359,8 @@ interface PersonFactory<P extends Person> {
 ```
 
 Instead of implementing the factory manually, we glue everything together via constructor references:
+
+我们通过构造器将所有东西粘在一起，而不是通过手动实现工厂方法。
 
 ```java
 PersonFactory<Person> personFactory = Person::new;
