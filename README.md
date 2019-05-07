@@ -368,15 +368,23 @@ Person person = personFactory.create("Peter", "Parker");
 ```
 
 We create a reference to the Person constructor via `Person::new`. The Java compiler automatically chooses the right constructor by matching the signature of `PersonFactory.create`.
+我们通过‘Person::new’ 创建Person构造器的引用。java编译器通过匹配‘PersonFactory.create'的签名自动地选择正确的构造函数。
 
 ## Lambda Scopes
 
+## Lambda 范围
+
 Accessing outer scope variables from lambda expressions is very similar to anonymous objects. You can access final variables from the local outer scope as well as instance fields and static variables.
+
+从lambda表达式访问外部变量和匿名对象非常相似。您可以从本地外部范围以及实例字段和静态变量访问final变量。
 
 ### Accessing local variables
 
+### 访问局部变量
+
 We can read final local variables from the outer scope of lambda expressions:
 
+我们可以从lambda表达式的外部范围读取final局部变量。
 ```java
 final int num = 1;
 Converter<Integer, String> stringConverter =
@@ -386,6 +394,8 @@ stringConverter.convert(2);     // 3
 ```
 
 But different to anonymous objects the variable `num` does not have to be declared final. This code is also valid:
+
+但是与匿名对象不同的是，变量' num '不必声明为final。此代码也是有效的:
 
 ```java
 int num = 1;
@@ -397,6 +407,8 @@ stringConverter.convert(2);     // 3
 
 However `num` must be implicitly final for the code to compile. The following code does **not** compile:
 
+但是，要编译代码，num必须是隐式的final。以下代码不**不**编译:
+
 ```java
 int num = 1;
 Converter<Integer, String> stringConverter =
@@ -405,6 +417,8 @@ num = 3;
 ```
 
 Writing to `num` from within the lambda expression is also prohibited.
+
+也禁止从lambda表达式中写入' num '
 
 ### Accessing fields and static variables
 
