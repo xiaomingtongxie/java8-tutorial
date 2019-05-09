@@ -422,7 +422,11 @@ Writing to `num` from within the lambda expression is also prohibited.
 
 ### Accessing fields and static variables
 
+### 访问域和静态变量
+
 In contrast to local variables, we have both read and write access to instance fields and static variables from within lambda expressions. This behaviour is well known from anonymous objects.
+
+与局部变量相反，我们可以从lambda表达式中读写实例字段和静态变量。这种行为在匿名对象中很常见。
 
 ```java
 class Lambda4 {
@@ -445,9 +449,15 @@ class Lambda4 {
 
 ### Accessing Default Interface Methods
 
+### 访问默认接口方法
+
 Remember the formula example from the first section? Interface `Formula` defines a default method `sqrt` which can be accessed from each formula instance including anonymous objects. This does not work with lambda expressions.
 
+还记得第一部分的公式例子吗?接口“Formula”定义了一个默认方法“sqrt”，可以从包括匿名对象在内的每个Formula实例访问该方法。这不适用于lambda表达式。
+
 Default methods **cannot** be accessed from within lambda expressions. The following code does not compile:
+
+不能从lambda表达式中访问默认方法。下列代码无法编译:
 
 ```java
 Formula formula = (a) -> sqrt(a * 100);
@@ -456,13 +466,23 @@ Formula formula = (a) -> sqrt(a * 100);
 
 ## Built-in Functional Interfaces
 
+## 内置函数式接口
+
 The JDK 1.8 API contains many built-in functional interfaces. Some of them are well known from older versions of Java like `Comparator` or `Runnable`. Those existing interfaces are extended to enable Lambda support via the `@FunctionalInterface` annotation.
+
+JDK 1.8 API包含许多内置的函数接口。其中一些在较老版本的Java中很有名，比如“Comparator”或“Runnable”。这些现有接口经过扩展，通过“@FunctionalInterface”注释支持Lambda。
 
 But the Java 8 API is also full of new functional interfaces to make your life easier. Some of those new interfaces are well known from the [Google Guava](https://code.google.com/p/guava-libraries/) library. Even if you're familiar with this library you should keep a close eye on how those interfaces are extended by some useful method extensions.
 
+但是Java 8 API也充满了新的功能接口，使您的工作更容易。其中一些新接口在[谷歌Guava](https://code.google.com/p/guava-libraries/)库中非常有名。即使您熟悉这个库，也应该密切关注那些接口是如何通过一些有用的方法扩展进行扩展的。
+
 ### Predicates
 
+### 判断（断言？）
+
 Predicates are boolean-valued functions of one argument. The interface contains various default methods for composing predicates to complex logical terms (and, or, negate)
+
+谓词是一个参数的布尔值函数。该接口包含各种默认方法，用于将谓词组合为复杂逻辑术语(and, or, negate)
 
 ```java
 Predicate<String> predicate = (s) -> s.length() > 0;
@@ -479,7 +499,11 @@ Predicate<String> isNotEmpty = isEmpty.negate();
 
 ### Functions
 
+### 函数
+
 Functions accept one argument and produce a result. Default methods can be used to chain multiple functions together (compose, andThen).
+
+函数接受一个参数并产生一个结果。默认方法可用于将多个函数链接在一起(组合，然后)。
 
 ```java
 Function<String, Integer> toInteger = Integer::valueOf;
@@ -490,7 +514,11 @@ backToString.apply("123");     // "123"
 
 ### Suppliers
 
+### 供应商？
+
 Suppliers produce a result of a given generic type. Unlike Functions, Suppliers don't accept arguments.
+
+供应商生成给定反省类型的结果。不像函数，供应商不接受参数。
 
 ```java
 Supplier<Person> personSupplier = Person::new;
