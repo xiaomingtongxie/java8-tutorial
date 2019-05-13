@@ -514,7 +514,7 @@ backToString.apply("123");     // "123"
 
 ### Suppliers
 
-### 供应商？
+### 生产者
 
 Suppliers produce a result of a given generic type. Unlike Functions, Suppliers don't accept arguments.
 
@@ -527,7 +527,11 @@ personSupplier.get();   // new Person
 
 ### Consumers
 
+### 消费者
+
 Consumers represent operations to be performed on a single input argument.
+
+消费者要单个输入参数执行的操作.
 
 ```java
 Consumer<Person> greeter = (p) -> System.out.println("Hello, " + p.firstName);
@@ -536,7 +540,11 @@ greeter.accept(new Person("Luke", "Skywalker"));
 
 ### Comparators
 
+### 比较器
+
 Comparators are well known from older versions of Java. Java 8 adds various default methods to the interface.
+
+比较器在比较老的java版本中很出名。java8在接口中加入了各种默认方法。
 
 ```java
 Comparator<Person> comparator = (p1, p2) -> p1.firstName.compareTo(p2.firstName);
@@ -550,9 +558,15 @@ comparator.reversed().compare(p1, p2);  // < 0
 
 ## Optionals
 
+## 选择器
+
 Optionals are not functional interfaces, but nifty utilities to prevent `NullPointerException`. It's an important concept for the next section, so let's have a quick look at how Optionals work.
 
+选择器不是函数接口，而是防止“空指针”的漂亮实用程序。这是下一节的一个重要概念，所以让我们快速了解一下选项的工作原理。
+
 Optional is a simple container for a value which may be null or non-null. Think of a method which may return a non-null result but sometimes return nothing. Instead of returning `null` you return an `Optional` in Java 8.
+
+选择器是一个简单的容器，其值可以为空或非空。考虑一个可能返回非空结果但有时什么也不返回的方法。在Java 8中，返回的不是“null”，而是“Optional”
 
 ```java
 Optional<String> optional = Optional.of("bam");
