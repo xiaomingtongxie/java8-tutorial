@@ -580,11 +580,19 @@ optional.ifPresent((s) -> System.out.println(s.charAt(0)));     // "b"
 
 ## Streams
 
+## 数据流
+
 A `java.util.Stream` represents a sequence of elements on which one or more operations can be performed. Stream operations are either _intermediate_ or _terminal_. While terminal operations return a result of a certain type, intermediate operations return the stream itself so you can chain multiple method calls in a row. Streams are created on a source, e.g. a `java.util.Collection` like lists or sets (maps are not supported). Stream operations can either be executed sequentially or parallely.
+
+“java.util。“流”表示可以在其上执行一个或多个操作的元素序列。流操作要么是_intermediate_，要么是_terminal_。当终端操作返回特定类型的结果时，中间操作返回流本身，因此您可以在一行中链接多个方法调用。流是在一个源上创建的，例如“java.util”。类似列表或集合的集合(不支持映射)。流操作可以顺序执行，也可以并行执行。
 
 > Streams are extremely powerful, so I wrote a separate [Java 8 Streams Tutorial](http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/). **You should also check out [Sequency](https://github.com/winterbe/sequency) as a similiar library for the web.**
 
+流非常强大，因此我编写了一个单独的[Java 8 Streams教程](http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/)。**您还应该查看[Sequency](https://github.com/winterbe/sequency)作为web.**的类似库
+
 Let's first look how sequential streams work. First we create a sample source in form of a list of strings:
+
+让我们首先看看顺序流是如何工作的。首先，我们创建一个字符串列表形式的示例源:
 
 ```java
 List<String> stringCollection = new ArrayList<>();
@@ -599,6 +607,8 @@ stringCollection.add("ddd1");
 ```
 
 Collections in Java 8 are extended so you can simply create streams either by calling `Collection.stream()` or `Collection.parallelStream()`. The following sections explain the most common stream operations.
+
+Java 8中的集合得到了扩展，因此您可以通过调用“Collection.stream()”或“Collection.parallelStream()”来创建流。下面几节解释最常见的流操作。
 
 ### Filter
 
