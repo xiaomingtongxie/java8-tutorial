@@ -612,7 +612,11 @@ Java 8中的集合得到了扩展，因此您可以通过调用“Collection.str
 
 ### Filter
 
+### 过滤器
+
 Filter accepts a predicate to filter all elements of the stream. This operation is _intermediate_ which enables us to call another stream operation (`forEach`) on the result. ForEach accepts a consumer to be executed for each element in the filtered stream. ForEach is a terminal operation. It's `void`, so we cannot call another stream operation.
+
+Filter接受一个谓词来过滤流的所有元素。这个操作是_intermediate_，它允许我们对结果调用另一个流操作(' forEach ')。ForEach接受为过滤后的流中的每个元素执行使用者。ForEach是一个终端操作。它是“void”，因此我们不能调用另一个流操作。
 
 ```java
 stringCollection
