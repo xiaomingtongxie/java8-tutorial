@@ -5,7 +5,7 @@
 
 # Modern Java - A Guide to Java 8
 
-# 时髦的Java -java 8 参考手册
+# 时髦的Java -java 8 参考手册 
 
 _This article was originally posted on [my blog](http://winterbe.com/posts/2014/03/16/java-8-tutorial/)._
 
